@@ -1,0 +1,10 @@
+[Unit]
+Description=SimBox service for send incoming messages to Telegram
+After=network.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /opt/m590e.py
+
+[Install]
+WantedBy=multi-user.target
